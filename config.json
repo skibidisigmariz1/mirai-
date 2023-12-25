@@ -6,6 +6,7 @@
     "allowInbox": true,
     "autoClean": false,
     "uptime": 3000000,
+    "encryptSt"
     "adminOnly": false,
     "keyAdminOnly": "",
     "commandDisabled": [
@@ -23,7 +24,7 @@
     "openai": "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",
     "CREATORLINK": "https://www.facebook.com/swordigo.swordslush",
     "CREATORID": "100065005240232",
-    "BOTNAME": "C𝗹𝗶𝗳𝗳bot",
+    "BOTNAME": "𝗬𝗔𝗭𝗞𝗬𝗕𝗢𝗧",
     "PREFIX": "#",
     "ADMINBOT": [
         "100053549552408",
@@ -114,7 +115,7 @@
     },
     "daily": {
         "cooldownTime": 4320000,
-        "rewardCoin": 1000000000000000000
+        "rewardCoin": 20000
     },
     "manslap": {
         "APIKEY": "Meew_Ov8SwxqVjUMUJafvxWAsdeac7YAUnr"

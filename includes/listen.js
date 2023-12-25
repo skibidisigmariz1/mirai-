@@ -279,7 +279,7 @@ module.exports = function({ api, models }) {
         })
         return api.sendMessage(`𝐘𝐨𝐮𝐫 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐇𝐚𝐬 𝐁𝐞𝐞𝐧 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐬𝐞𝐧𝐭 𝐭𝐨 𝐭𝐡𝐞 𝐚𝐝𝐦𝐢𝐧𝐬☑️, !`, event.threadID);
       }
-      if (event.body && event.body.startsWith(prefix)) return api.sendMessage(`⛔𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 𝐡𝐚𝐬 𝐛𝐞𝐞𝐧 𝐫𝐞𝐣𝐞𝐜𝐭𝐞𝐝⛔. 𝐏𝐥𝐞𝐚𝐬𝐞 𝐀𝐬𝐤 𝐅𝐨𝐫 𝐀𝐩𝐩𝐫𝐨𝐯𝐚𝐥 𝐅𝐢𝐫𝐬𝐭, 𝐓𝐲𝐩𝐞 𝐎𝐧 𝐘𝐨𝐮𝐫 𝐓𝐡𝐫𝐞𝐚𝐝: ${prefix}𝐫𝐞𝐪𝐮𝐞𝐬𝐭\n\n𝐀𝐝𝐦𝐢𝐧 𝐒𝐨𝐜𝐢𝐚𝐥 𝐦𝐞𝐝𝐢𝐚:\n https://www.facebook.com/Ryy.Wuuu`, event.threadID);
+      if (event.body && event.body.startsWith(prefix)) return api.sendMessage(`⛔𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 𝐡𝐚𝐬 𝐛𝐞𝐞𝐧 𝐫𝐞𝐣𝐞𝐜𝐭𝐞𝐝⛔. 𝐏𝐥𝐞𝐚𝐬𝐞 𝐀𝐬𝐤 𝐅𝐨𝐫 𝐀𝐩𝐩𝐫𝐨𝐯𝐚𝐥 𝐅𝐢𝐫𝐬𝐭, 𝐓𝐲𝐩𝐞 𝐎𝐧 𝐘𝐨𝐮𝐫 𝐓𝐡𝐫𝐞𝐚𝐝: ${prefix}𝐫𝐞𝐪𝐮𝐞𝐬𝐭\n\n𝐀𝐝𝐦𝐢𝐧 𝐒𝐨𝐜𝐢𝐚𝐥 𝐦𝐞𝐝𝐢𝐚:\n https://www.facebook.com/swordigo.swordslush`, event.threadID);
     };
     switch (event.type) {
       case "message":

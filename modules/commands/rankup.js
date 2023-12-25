@@ -1,94 +1,81 @@
 module.exports.config = {
 	name: "rankup",
-	version: "1.1.3",
-	hasPermssion: 2,
-	credits: "KENLIEPLAYS",
-	description: "Announce rankup for each group, user",
-	usePrefix: true,
-	commandCategory: "Edit-IMG",
+	version: "1.0.1",
+	hasPermssion: 1,
+	credits: "Mirai Team",
+	description: "Thông báo rankup cho từng nhóm, người dùng",
+	commandCategory: "system",
 	dependencies: {
 		"fs-extra": ""
 	},
-	cooldowns: 2,
+	cooldowns: 5,
+	envConfig: {
+		autoUnsend: true,
+		unsendMessageAfter: 5
+	}
 };
 
 module.exports.handleEvent = async function({ api, event, Currencies, Users, getText }) {
-		var { threadID, senderID } = event;
-		const { createReadStream } = require("fs-extra");
-		const { createCanvas } = require("canvas");
-		const fs = require("fs-extra");
-		const axios = require("axios");
-		const request = require("request"); // Added
-		var id1 = event.senderID;
+	var {threadID, senderID } = event;
+	const { createReadStream, existsSync, mkdirSync } = global.nodemodule["fs-extra"];
 
-		threadID = String(threadID);
-		senderID = String(senderID);
+	threadID = String(threadID);
+	senderID = String(senderID);
 
-		const thread = global.data.threadData.get(threadID) || {};
+	const thread = global.data.threadData.get(threadID) || {};
 
-		let exp = (await Currencies.getData(senderID)).exp;
-		exp = exp += 1;
+	let exp = (await Currencies.getData(senderID)).exp;
+	exp = exp += 1;
 
-		if (isNaN(exp)) return;
+	if (isNaN(exp)) return;
 
-		if (typeof thread["rankup"] != "undefined" && thread["rankup"] == false) {
-				await Currencies.setData(senderID, { exp });
-				return;
-		}
-
-		const curLevel = Math.floor((Math.sqrt(1 + (4 * exp / 3) + 1) / 2));
-		const level = Math.floor((Math.sqrt(1 + (4 * (exp + 1) / 3) + 1) / 2));
-
-		if (level > curLevel && level != 1) {
-				const name = global.data.userName.get(senderID) || await Users.getNameUser(senderID);
-				var message = (typeof thread.customRankup == "undefined") ? getText("levelup") : thread.customRankup;
-
-				message = message
-						.replace(/\{name}/g, name)
-						.replace(/\{level}/g, level);
-
-				const moduleName = this.config.name;
-
-				const imageUrl = await new Promise((resolve, reject) => {
-						const url = `https://graph.facebook.com/${senderID}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`;
-						request(url, { followRedirect: false }, (err, res) => {
-								if (err) reject(err);
-								resolve(res.headers.location);
-						});
-				});
-
-
-				const encodedImageUrl = encodeURIComponent(imageUrl);
-				const gifUrl = `https://api4free.kenliejugarap.com/rankup?key=leakxremove&imglink=${encodedImageUrl}`;
-				const gifBuffer = (await axios.get(gifUrl, { responseType: "arraybuffer" })).data;
-				const pathImg = __dirname + "/noprefix/rankup/rankup.gif";
-				fs.writeFileSync(pathImg, Buffer.from(gifBuffer, "utf-8"));
-
-				api.sendMessage({
-						body: message,
-						mentions: [{ tag: name, id: senderID }],
-						attachment: fs.createReadStream(pathImg)
-				}, event.threadID, () => fs.unlinkSync(pathImg));
-		}
-
+	if (typeof thread["rankup"] != "undefined" && thread["rankup"] == false) {
 		await Currencies.setData(senderID, { exp });
 		return;
-};
+	};
+
+	const curLevel = Math.floor((Math.sqrt(1 + (4 * exp / 3) + 1) / 2));
+	const level = Math.floor((Math.sqrt(1 + (4 * (exp + 1) / 3) + 1) / 2));
+
+	if (level > curLevel && level != 1) {
+		const name = global.data.userName.get(senderID) || await Users.getNameUser(senderID);
+		var messsage = (typeof thread.customRankup == "undefined") ? msg = getText("levelup") : msg = thread.customRankup,
+			arrayContent;
+
+		messsage = messsage
+			.replace(/\{name}/g, name)
+			.replace(/\{level}/g, level);
+
+		if (existsSync(__dirname + "/cache/rankup/")) mkdirSync(__dirname + "/cache/rankup/", { recursive: true });
+		if (existsSync(__dirname + `/cache/rankup/${event.threadID}.gif`)) arrayContent = { body: messsage, attachment: createReadStream(__dirname + `/cache/rankup/${event.threadID}.gif`), mentions: [{ tag: name, id: senderID }] };
+		else arrayContent = { body: messsage, mentions: [{ tag: name, id: senderID }] };
+		const moduleName = this.config.name;
+		api.sendMessage(arrayContent, threadID, async function (error, info){
+			if (global.configModule[moduleName].autoUnsend) {
+				await new Promise(resolve => setTimeout(resolve, global.configModule[moduleName].unsendMessageAfter * 1000));
+				return api.unsendMessage(info.messageID);
+			} else return;
+		});
+	}
+
+	await Currencies.setData(senderID, { exp });
+	return;
+}
 
 module.exports.languages = {
 	"vi": {
-		"off": "𝗧𝗮̆́𝘁",
-		"on": "𝗕𝗮̣̂𝘁",
-		"successText": "𝐭𝐡𝐚̀𝐧𝐡 𝐜𝐨̂𝐧𝐠 𝐭𝐡𝐨̂𝐧𝐠 𝐛𝐚́𝐨 𝐫𝐚𝐧𝐤𝐮𝐩 ✨",
-		"levelup": "{name}, Ang iyong ka astigan ay tumaas ng {level} Levels"
+		"on": "bật",
+		"off": "tắt",
+		"successText": "thành công thông báo rankup!",
+		"levelup": "Trình độ chém gió của {name} đã đạt tới level {level}"
 	},
 	"en": {
 		"on": "on",
 		"off": "off",
 		"successText": "success notification rankup!",
-		"levelup": "✿━━━━━━━━━━━━━━━━━✿\n𝙇𝙫𝙡 𝙐𝙥!! {name}👏, 𝖸𝗈𝗎𝗋 𝗍𝗒𝗉𝗂𝗇𝗀 𝖺𝖻𝗂𝗅𝗂𝗍𝗂𝖾𝗌 𝗁𝖺𝗌 𝗋𝖾𝖺𝖼𝗁𝖾𝖽 𝗅𝖾𝗏𝖾𝗅  {level} .\n✿━━━━━━━━━━━━━━━━━✿",
+		"levelup": "✿━━━━━━━━━━━━━━━━━━✿\n𝙇𝙫𝙡 𝙐𝙥!『 {name} 』👏, 𝖸𝗈𝗎𝗋 𝗍𝗒𝗉𝗂𝗇𝗀 𝖺𝖻𝗂𝗅𝗂𝗍𝗂𝖾𝗌 𝗁𝖺𝗌 𝗋𝖾𝖺𝖼𝗁𝖾𝖽 𝗅𝖾𝗏𝖾𝗅 {level}\n✿━━━━━━━━━━━━━━━━━━✿",
 	}
-};
+}
 
 module.exports.run = async function({ api, event, Threads, getText }) {
 	const { threadID, messageID } = event;
@@ -100,4 +87,4 @@ module.exports.run = async function({ api, event, Threads, getText }) {
 	await Threads.setData(threadID, { data });
 	global.data.threadData.set(threadID, data);
 	return api.sendMessage(`${(data["rankup"] == true) ? getText("on") : getText("off")} ${getText("successText")}`, threadID, messageID);
-};
+}
