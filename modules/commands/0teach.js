@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "teach",
+  name: "teach2",
   version: "1.0.0",
   hasPermssion: 0,
   credits: "Hazeyy", // Thanks to my friend John Lester for helping me out 
