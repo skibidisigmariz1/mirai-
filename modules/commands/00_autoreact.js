@@ -1,33 +1,39 @@
-const axios = require("axios");
+const axios = require('axios');
 
-let autoReactEnabled = true; // Variable to toggle auto-reaction on/off
-
-module.exports.config = {
-	name: "autoreact",
-	version: "1.0.0", // Update with the appropriate version number
-	hasPermission: 0,
-	credits: "JV Barcenas & cyril",
-	description: "Toggle auto-reaction based on message content",
-	commandCategory: "Utility", // Update this with an appropriate category
-	cooldowns: 5,
+const onMAIN = async ({ api, event }) => {
+		api.sendMessage('Auto React will automatically react to a user\'s message.', event.threadID);
 };
 
-async function autoReactCommand(event) {
-	try {
-		if (autoReactEnabled) {
-			const apiUrl = `https://school-project-lianefca.bene-edu-ph.repl.co/autoreact?query=${encodeURIComponent(event.body)}`;
+const onChat = async (context) => { 
+		const { api, event } = context;
 
-			const response = await axios.get(apiUrl);
-			const aiResponse = response.data.response; // Assuming the API returns a 'response' field
-
-			// Set reaction using your bot's API function
-			api.setMessageReaction(aiResponse, () => {}, true);
+		// Probability of 90%
+		if (Math.random() < 0.9) {
+				const response = await axios.get(`https://lianeapi.onrender.com/autoreact?query=${encodeURIComponent(event.body)}`);
+				const emoji = response.data.message;
+				api.setMessageReaction(emoji, event.messageID, () => {}, true);
 		}
-	} catch (error) {
-		console.error('Error fetching or setting reactions:', error);
-	}
-}
+};
 
-function toggleAutoReact(status) {
-	autoReactEnabled = status.toLowerCase() === 'on';
-}
+module.exports = {
+		config: {
+				name: "react",
+				version: "1.0",
+				credits: "LiANE",//converted by cliff
+				description: "Auto React",
+				usages: "[text]",
+				commandCategory: "Noprefix",
+				hasPermission: 2,
+				usePrefix: true,
+				cooldown: 5,
+		},
+		onMAIN,
+		onStart: async (context) => {
+				await onMAIN(context); 
+		},
+		run: async (context) => {
+				await onMAIN(context); 
+		},
+		onChat,
+		handleEvent: onChat,
+};

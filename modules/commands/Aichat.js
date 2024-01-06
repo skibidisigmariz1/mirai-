@@ -11,7 +11,7 @@ const typewriterMapping = {
 };
 
 module.exports.config = {
-	name: 'Aichat',
+	name: 'Ai2',
 	version: '1.0.0',
 	hasPermission: 0,
 	credits: 'August Quinn',

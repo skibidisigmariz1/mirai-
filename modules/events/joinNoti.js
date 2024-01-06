@@ -24,7 +24,7 @@ module.exports.run = async function ({ api, event }) {
 			`Connected successfully!\nThank you for using this bot, have fun using it\n\nUsage: ${global.config.PREFIX}help\nUse ${global.config.PREFIX}callad if there is an error to the Bot the bot admin will try to fix this as soon as possible.`,
 			threadID
 		);
-		api.sendMessage({ sticker: 40130 }, threadID); 
+		api.sendMessage({ sticker: 40130 }, threadID);
 	} else {
 		try {
 			const { threadName, participantIDs } = await api.getThreadInfo(threadID);
@@ -40,36 +40,48 @@ module.exports.run = async function ({ api, event }) {
 				const mentions = [{ tag: userName, id: userID, fromIndex: 0 }];
 				const memLength = participantIDs.length;
 
-				let msg = typeof threadData.customJoin === "undefined"
-					? `Hello ${userName}! Welcome to ${threadName}\nYou're the ${memLength}th member of this group, please enjoy!❤️🥳️`
-					: threadData.customJoin.replace(/\{uName}/g, userName).replace(/\{soThanhVien}/g, memLength);
+				// Assuming necessary imports and variables are declared before this function
+				let msg =
+					typeof threadData.customJoin === "undefined"
+						? `Hello ${userName}! Welcome to ${threadName}\nYou're the ${memLength}th member of this group, please enjoy!❤️🥳️`
+						: threadData.customJoin
+								.replace(/\{uName}/g, userName)
+								.replace(/\{soThanhVien}/g, memLength);
 
-				const welcomeGifUrl = `https://kneegasaurus.lazygreyzz.repl.co/welcome?uid=${userID}&lvl=${encodeURIComponent(threadName)}&name=${encodeURIComponent(userName)}`;
-				const options = {
-					uri: encodeURI(welcomeGifUrl),
-					method: "GET",
-				};
+				function fetchAndSendWelcomeGif(userID, threadName, userName, mentions, event, api, threadData, memLength) {
+					try {
+						const welcomeGifUrl = `https://i.imgur.com/wJBoiIH.gif`;
+						const options = {
+							uri: encodeURI(welcomeGifUrl),
+							method: "GET",
+						};
 
-				const callback = function () {
-					return api.sendMessage(
-						{
-							body: msg,
-							attachment: fs.createReadStream(__dirname + `/cache/welcome.gif`),
-							mentions,
-						},
-						event.threadID,
-						() => {
-							fs.unlinkSync(__dirname + `/cache/welcome.gif`);
-						}
-					);
-				};
+						const callback = function () {
+							return api.sendMessage(
+								{
+									body: msg,
+									attachment: fs.createReadStream(__dirname + `/cache/welcome.gif`),
+									mentions,
+								},
+								event.threadID,
+								() => {
+									fs.unlinkSync(__dirname + `/cache/welcome.gif`);
+								}
+							);
+						};
 
-				request(options)
-					.pipe(fs.createWriteStream(__dirname + `/cache/welcome.gif`))
-					.on("close", callback);
+						request(options)
+							.pipe(fs.createWriteStream(__dirname + `/cache/welcome.gif`))
+							.on("close", callback);
+					} catch (err) {
+						return console.log("ERROR: " + err);
+					}
+				}
+				// Call the fetchAndSendWelcomeGif function with required parameters
+				fetchAndSendWelcomeGif(userID, threadName, userName, mentions, event, api, threadData, memLength);
 			}
 		} catch (err) {
-			return console.log("ERROR: " + err);
+			console.log("ERROR: " + err);
 		}
 	}
 };

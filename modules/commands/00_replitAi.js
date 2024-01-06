@@ -4,7 +4,7 @@ module.exports.config = {
 	name: "replit",
 	version: "2.1.2",
 	hasPermssion: 0,
-	credits: "Hazeyy",
+	credits: "Hazeyy",//modify by cliff
 	description: "Use Replit AI for various tasks",
 	commandCategory: "no prefix",
 	usages: "Replit AI",
@@ -20,14 +20,29 @@ module.exports.handleEvent = async function ({ api, event, Users }) {
 	const startTime = Date.now();
 	const { threadID, messageID } = event;
 
-	const menu = `Please reply with the number of your choice:
-1. Set up new projects with Replit AI
-2. Answer questions about your code
-3. Assist your thinking
-4. Create a personal assistant chatbot
-5. Fix the logic of updating price
-6. How does Replit work
-7. How to deploy a Replit Configuration project`;
+	const menu = `🔴🟡🟢\n\n𝗣𝗹𝗲𝗮𝘀𝗲 𝘁𝘆𝗽𝗲 𝗥𝗲𝗽𝗹𝗶𝘁 𝗮𝗻𝗱 𝘁𝗵𝗲 𝗻𝘂𝗺𝗯𝗲𝗿 𝘆𝗼𝘂 𝘀𝗲𝗹𝗲𝗰𝘁𝗲𝗱:
+
+╭─❍
+➠ 1. Set up new projects with Replit AI
+╰───────────⟡ 
+╭─❍
+➠ 2. Answer questions about your code
+╰───────────⟡ 
+╭─❍
+➠ 3. Assist your thinking
+╰───────────⟡ 
+╭─❍
+➠ 4. Create a personal assistant\n |      chatbot
+╰───────────⟡ 
+╭─❍
+➠ 5. Fix the logic of updating price
+╰───────────⟡ 
+╭─❍
+➠ 6. How does Replit work
+╰───────────⟡ 
+╭─❍
+➠ 7. How to deploy a Replit\n |      Configuration  project
+╰───────────⟡`;
 
 	if (!args[0]) {
 		api.sendMessage(menu, threadID, messageID);

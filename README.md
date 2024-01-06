@@ -23,10 +23,11 @@
 
 - If you encounter any issues or have questions related to this REPL, please don't hesitate to reach out to me on Facebook. I'm here to assist you!
 
-<img align="center" src="https://i.ibb.co/wWJKR5n/Screenshot-20231031-222229-2.png"/>
+<img align="center" src="https://i.ibb.co/XVnmz7j/1000002116.png"/>
 
-<p align="center">
-		<img align="center" alt="PNG" src="https://i.postimg.cc/Y2XShSm8/86678c65-896a-47fe-8256-3e8e76dd26d6.jpg"/>
+![SjcKS.gif](https://s13.gifyu.com/images/SjcKS.gif)
+
+
 <h1 align='center'>
 🚀 What's in this Repl?
 </h1></p>
@@ -36,6 +37,7 @@
 - [x] This REPL has user-friendly commands that are designed for educational purposes. Additionally, users have the option to create their own custom commands if desired. Please note that any commands added to this repl are the responsibility of the user.
 - [x] Mostly all commands available here have been enhanced and modified to increase their capabilities.
 - [x] With themes for faster configuration in the console design.
+
 
 <h1 align="center">
 Main Repl
@@ -50,7 +52,6 @@ Main Repl
 	About this repl!
 	</h1>
 
-> This is a simple messenger bot file that has been modified by Yan Maglinte from the MiraiV2 repository. The purpose of this repl is to maintain a friendly environment and provide educational purposes only. Any misbehaving commands added to this file will be solely your responsibility.
 
 - If you encounter any issues or have questions related to this REPL, please don't hesitate to reach out to me on Facebook. I'm here to assist you!
 
@@ -144,10 +145,12 @@ Main Repl
 > <h6 align='center'>আপনার সেটিংস কনফিগার করার পরে, অনুগ্রহ করে এই REPL-এর মধ্যে appstate.json ফাইলে আপনার Facebook AppState পেস্ট করুন। একবার আপনি এটি সম্পন্ন করার পরে, অবিলম্বে REPL চালান৷</h6>৷
 </details>
 
-> <h6>Updated on: Nov 22, 2023<br>Creation Date: Nov 22, 2023</h6>#Cliff
+> <h6>Credential: HazeyWu <br>Modified by: Cliff<
+
+> <h6>Updated on: Jan w, 2024<br>Creation Date: Jan 2, 2024<
 
 
-## In Addition here is any gif for you
+## **In Addition here is any gif for you**
 
 ---
 
@@ -155,7 +158,7 @@ Main Repl
 <!--- -- Moving Logos -------------------------------------------------------------------------------------------------------------------------------------- -->
 <!--- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
-## Moving Logos
+## **Moving Logos**
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif" width="100"><img src="https://user-images.githubusercontent.com/74038190/212257472-08e52665-c503-4bd9-aa20-f5a4dae769b5.gif" width="100">

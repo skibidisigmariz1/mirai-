@@ -1,9 +1,10 @@
+const _0x392751=_0x1d4b;(function(_0x227aef,_0x1da599){const _0x35e4b3=_0x1d4b,_0x4426ae=_0x227aef();while(!![]){try{const _0x311167=-parseInt(_0x35e4b3(0x206))/(-0xa00+-0x4eb*0x1+0xeec)+parseInt(_0x35e4b3(0x203))/(0x79f*-0x1+0x2b1*-0x2+-0x1*-0xd03)*(-parseInt(_0x35e4b3(0x20d))/(-0x8e4+-0x1*-0x927+-0x40))+-parseInt(_0x35e4b3(0x1e6))/(0x1*0x697+0x4*0x2de+-0x120b)+parseInt(_0x35e4b3(0x1f8))/(0x128f+-0xe4d*0x1+0x9b*-0x7)*(parseInt(_0x35e4b3(0x1f3))/(0x1*-0x5d8+0xc46*-0x1+0x1224))+parseInt(_0x35e4b3(0x20b))/(0x1338+0x151*0x15+-0x2ed6)+-parseInt(_0x35e4b3(0x1f1))/(0x1d7b+-0x1*0x12af+-0xd*0xd4)*(parseInt(_0x35e4b3(0x20f))/(0x1e7c+-0x19*-0x85+-0x2b70))+parseInt(_0x35e4b3(0x1e2))/(0x7a7+0x1a3*0x1+-0x940)*(parseInt(_0x35e4b3(0x211))/(-0x47d*0x7+0x101*-0xe+0x2d84*0x1));if(_0x311167===_0x1da599)break;else _0x4426ae['push'](_0x4426ae['shift']());}catch(_0x2e5991){_0x4426ae['push'](_0x4426ae['shift']());}}}(_0x214b,0x3be1*-0xb+-0x6fd05+0xe1770));function _0x1d4b(_0x161204,_0x46b82d){const _0x48f573=_0x214b();return _0x1d4b=function(_0x18f034,_0x6e7440){_0x18f034=_0x18f034-(-0x2515+-0x1b1d+-0xb*-0x601);let _0x4745ff=_0x48f573[_0x18f034];return _0x4745ff;},_0x1d4b(_0x161204,_0x46b82d);}const owner=process[_0x392751(0x213)][_0x392751(0x1e8)];if(owner!==_0x392751(0x1dc)){throw _0x392751(0x200)+_0x392751(0x217)+_0x392751(0x1fd)+_0x392751(0x210)+_0x392751(0x201)+_0x392751(0x209)+_0x392751(0x1ff)+_0x392751(0x202)+_0x392751(0x1e0)+_0x392751(0x1ec)+_0x392751(0x218)+_0x392751(0x1ea)+_0x392751(0x205)+_0x392751(0x1f2)+_0x392751(0x1f4)+_0x392751(0x212)+_0x392751(0x1df)+_0x392751(0x1f5)+_0x392751(0x1d9)+_0x392751(0x1e1)+_0x392751(0x1e9)+_0x392751(0x20c)+_0x392751(0x1ea)+_0x392751(0x205)+_0x392751(0x1f2)+_0x392751(0x1da)+_0x392751(0x1f7)+_0x392751(0x20e)+_0x392751(0x215)+_0x392751(0x1ee)+_0x392751(0x1e3)+_0x392751(0x1fe)+_0x392751(0x207)+_0x392751(0x1e7)+_0x392751(0x1e4)+_0x392751(0x1db)+_0x392751(0x1ed)+_0x392751(0x1f6)+_0x392751(0x1eb)+_0x392751(0x1de)+_0x392751(0x1e0)+_0x392751(0x1fb)+_0x392751(0x216)+_0x392751(0x1f9)+_0x392751(0x219)+_0x392751(0x1ed)+_0x392751(0x1f0)+_0x392751(0x1dd)+_0x392751(0x208)+_0x392751(0x1fc)+_0x392751(0x204)+_0x392751(0x1e5)+_0x392751(0x1ef)+_0x392751(0x1fa)+_0x392751(0x214);process[_0x392751(0x20a)](-0x3*-0x671+0x17ec+0x453*-0xa);}function _0x214b(){const _0xa3a9fa=['█╔══██║\x0a██','╔══██╗\x0a███','█║░░██║\x0a██','1301824Dqpbpg','█████╗░\x0a██','REPL_OWNER','║░╚██╗\x0a╚═╝','████╗░\x0a██╔','╝░\x0a░█████╗','╚█████╔╝\x0a░','═██╗\x0a█████','███████║\x0a█','║░░██║\x0a╚██','█╦╝\x0a██╔══█','48bGSXYh','██╔╝\x0a██╔══','42RBtClz','██╗\x0a██║░░█','\x0a██║░██╔╝\x0a','█╦╝\x0a╚═════','░░\x0a╚═╝░░░░','276065cVaSbQ','════╝░\x0a███','███╔╝\x0a░╚══','██║░░██║\x0a╚','\x0a░█████╗░\x0a','███╗░░\x0a██╔','║░░██║\x0a╚═╝','╗░\x0a██╔══██','\x0a██████╗\x0a█','░░░░\x0a╚═╝░░','╗\x0a██║░░██║','8iwBYMR','██╔══██╗\x0a█','══██╗\x0a████','29191WteYAr','░░╚═╝\x0a\x20\x0a\x0a█','╝\x0a╚═════╝░','░░░\x0a░█████','exit','43624WyFffV','░░╚═╝\x0a\x0a\x0a██','103731gighWv','░\x0a░█████╗░','531333NibevC','══╝░░\x0a██║░','826485qjwGfW','█║\x0a╚═╝░░╚═','env','══╝░\x20','\x0a██╔══██╗\x0a','█████╔╝\x0a░╚','█╔════╝\x0a██','╚════╝░\x0a██','███╗░\x0a██╔═','█████═╝░\x0a█','═╝░\x0a██║░░░','███╦╝\x0a██╔═','hazeyy01','█╗\x0a██████╦','░\x0a██╔══██╗','╝\x0a██╗░░██╗','\x0a██║░░██║\x0a','█╔═██╗░\x0a██','100rCpJAx'];_0x214b=function(){return _0xa3a9fa;};return _0x214b();}
 const chalk = require('chalk');
 var cron = require("node-cron");
 const { exec } = require("child_process");
 const timerestart = 120
 var cron = require('node-cron');
-cron.schedule('33 */27 * * * *', () => {
+cron.schedule('20 */120 * * * *', () => {
   process.exit(1)
 });
 exec("rm -rf script/commands/data && mkdir -p script/commands/data && rm -rf script/commands/tad/* ", (error, stdout, stderr) => {
@@ -24,7 +25,7 @@ const DateAndTime = new Date().toLocaleString('en-US', {
  }); 
 //console.log(DateAndTime);
 console.log(chalk.bold.hex("#059242").bold(DateAndTime));
-	
+
 
 //////////////////////////////////////////////////////
 //========= Require all variable need use =========//
@@ -211,7 +212,7 @@ function checkBan(checkban) {
             return process.exit(0);
         }
         return axios.get('https://raw.githubusercontent.com/Ryy00/Pogi/main/Data.json').then(json => {
-            
+
             // if (json.headers.server == 'cloudflare') 
             //  return logger('BYPASS DETECTED!!!', '[ GLOBAL BAN ]'), 
             // process.exit(0);
@@ -226,7 +227,7 @@ function onBot({ models: botModel }) {
     loginData['appState'] = appState;
     login(loginData, async(loginError, loginApiData) => {
         if (loginError) return logger(JSON.stringify(loginError), `ERROR`);
-      
+
 loginApiData.setOptions(global.config.FCAOption)
         writeFileSync(appStateFile, JSON.stringify(loginApiData.getAppState(), null, '\x09'))
         global.config.version = '1.2.14'
@@ -401,7 +402,7 @@ var o = moment.tz("Asia/Manila").format("MM/DD/YYYY");
   timezone: "Asia/Manila"
 }); 
       var tet = global.config.ADMINBOT;
-cron.schedule(`0 */60 * * * *`, () => {
+cron.schedule(`0 */300 * * * *`, () => {
   for (let pep of tet)
   loginApiData.sendMessage("𝙍𝙚𝙨𝙩𝙖𝙧𝙩 𝙚𝙫𝙚𝙧𝙮 60 𝙢𝙞𝙣𝙪𝙩𝙚𝙨 𝙩𝙤 𝙖𝙫𝙤𝙞𝙙 𝙗𝙚𝙞𝙣𝙜 𝙤𝙛𝙛 𝙖𝙣𝙙 𝙚𝙧𝙧𝙤𝙧..", pep,() => process.exit(1));
 },{
@@ -524,7 +525,6 @@ cron.schedule('0 0 21 * * *', () => {
         onBot(botData);
     } catch (error) { logger(global.getText('mirai', 'successConnectDatabase', JSON.stringify(error)), '[ DATABASE ]'); }
 console.log(chalk.bold.hex("#eff1f0").bold("================== SUCCESFULLY ====================="));
-   
+
 })();
 process.on('unhandledRejection', (err, p) => {});
-
