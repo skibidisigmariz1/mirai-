@@ -3,7 +3,7 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-app.get('/', (req, res) => res.send('Remade By Siegfried Sama!!'));
+app.get('/', (req, res) => res.send('Cliff!!'));
 
 app.listen(port, () =>
 	console.log(`Your app is listening at http://localhost:${port}`)
@@ -15,7 +15,7 @@ const millisecondsInHour = 60 * 60 * 1000;
 const totalTimeToRun = durationInHours * millisecondsInHour;
 
 setTimeout(() => {
-	console.log(`The script ran for ${durationInHours} hours and has stopped now.`);
+	console.log(`The script run for ${durationInHours} hours and has stopped now.`);
 	process.exit(0); // Exit the process after the duration ends
 }, totalTimeToRun);
 

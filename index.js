@@ -56,44 +56,8 @@ function monitorUptime() {
 	setInterval(() => {
 		const uptime = getUptime();
 		console.log(`System uptime: ${uptime}`);
-	}, 5000); // Change the interval (in milliseconds) as needed
+	}, 300000); // Change the interval (in milliseconds) as needed
 }
 
 monitorUptime();
 
-function runLoop() {
-	console.log("Executing the loop");
-}
-
-function startLoop() {
-	runLoop();
-	setTimeout(startLoop, 24 * 60 * 60 * 1000);
-}
-
-startLoop();
-
-function getUptime() {
-		const uptime = os.uptime();
-		const hours = Math.floor(uptime / 3600);
-		const minutes = Math.floor((uptime % 3600) / 60);
-		const seconds = Math.floor(uptime % 60);
-
-		return `${hours} hours, ${minutes} minutes, ${seconds} seconds`;
-}
-
-function monitorUptime() {
-		const totalMilliseconds = 120 * 60 * 60 * 1000; // 120 hours in milliseconds
-		let elapsedTime = 0;
-
-		const interval = setInterval(() => {
-				const uptime = getUptime();
-				console.log(`System uptime: ${uptime}`);
-
-				elapsedTime += 5000; // Interval is every 5000 milliseconds
-				if (elapsedTime >= totalMilliseconds) {
-						clearInterval(interval); // Stop when reaching 120 hours
-				}
-		}, 5000);
-}
-
-monitorUptime();

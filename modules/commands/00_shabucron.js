@@ -108,7 +108,7 @@ module.exports.config = {
 		name: 'shabucron',
 		version: '2.0.0',
 		hasPermission: 0,
-		credits: 'Eugene Aguilar',
+		credits: 'Cliff_shipazu',
 		usePrefix: true,
 		description: 'Automatically send videos on and off',
 		commandCategory: 'shoti cron',
